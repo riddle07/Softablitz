@@ -7,9 +7,11 @@ import java.util.logging.Logger;
 import javax.swing.JTextArea;
 
 public class StateSearch extends javax.swing.JFrame {
+    API api;
 
-    public StateSearch() {
+    public StateSearch(API t) {
         initComponents();
+        api = t;
     }
      StateRetrieve stateRetrieve = new StateRetrieve(this);
     @SuppressWarnings("unchecked")
@@ -155,9 +157,8 @@ public void setdTextField(String s){
     }//GEN-LAST:event_searchActionPerformed
 
     private void ReloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReloadActionPerformed
-        API ob = new API();
         try {
-            ob.getJ("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise","State");
+            api.getJ("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise","State");
         } catch (IOException ex) {
             Logger.getLogger(StateSearch.class.getName()).log(Level.SEVERE, null, ex);
         }

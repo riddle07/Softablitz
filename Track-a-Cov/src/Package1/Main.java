@@ -7,9 +7,9 @@ public class Main {
         
       
       API api = new API();
-      //api.getJ("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise","State");
-      //api.getJ("https://api.rootnet.in/covid19-in/contacts","Contacts");
-      //api.getJ("https://api.covidindiatracker.com/state_data.json","District");
+     // api.getJ("https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise","State");
+      api.getJ("https://api.rootnet.in/covid19-in/contacts","Contacts");
+      api.getJ("https://api.covidindiatracker.com/state_data.json","District");
       
      
       MainFrame mainFrame = new MainFrame();

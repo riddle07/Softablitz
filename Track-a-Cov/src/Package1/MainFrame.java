@@ -5,7 +5,7 @@ import java.util.Calendar;
 
 
 public class MainFrame extends javax.swing.JFrame {
-
+    API api;
     Calendar calendar = Calendar.getInstance();
     
     public MainFrame() {
@@ -169,7 +169,7 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        StateSearch stateSearch = new StateSearch();
+        StateSearch stateSearch = new StateSearch(api);
         stateSearch.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
