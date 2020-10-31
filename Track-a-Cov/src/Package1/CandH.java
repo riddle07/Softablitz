@@ -15,9 +15,6 @@ public class CandH extends javax.swing.JFrame {
    public void setTime(String s){
        jLabel6.setText(s);
    }
-   public void setNationalNumber(String s){
-       national.setText(s);
-   }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -42,6 +39,9 @@ public class CandH extends javax.swing.JFrame {
         jLabel1.setText("CONTACTS AND HELPLINES");
 
         jLabel2.setText("NATIONAL HELPLINE NUMBER");
+
+        national.setEditable(false);
+        national.setText("+91-11-23978046");
 
         jLabel3.setText("STATE HELPLINE NUMBER");
 
@@ -120,8 +120,9 @@ public class CandH extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         ContactRetrieve contactRetrieve = new ContactRetrieve(this);
+        String str = new String(name.getText());
         contactRetrieve.gob();
-        contactRetrieve.state(name.getText());
+        contactRetrieve.state(str.replaceAll(" ",""));
     }//GEN-LAST:event_jButton1ActionPerformed
 
     

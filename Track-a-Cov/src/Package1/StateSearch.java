@@ -151,9 +151,9 @@ public void setdTextField(String s){
 }
     
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
-        
+        String str = new String(stateName.getText());
         stateRetrieve.gob();
-        stateRetrieve.state(stateName.getText());
+        stateRetrieve.state(str.replaceAll(" ",""));
     }//GEN-LAST:event_searchActionPerformed
 
     private void ReloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReloadActionPerformed

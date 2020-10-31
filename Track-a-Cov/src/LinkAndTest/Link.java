@@ -1,4 +1,4 @@
-package com.mycompany.track_a_cov;
+
 import java.net.URI;
 import java.awt.Desktop;
 public class Link {

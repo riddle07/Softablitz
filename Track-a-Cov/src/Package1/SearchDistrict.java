@@ -78,7 +78,8 @@ public class SearchDistrict extends javax.swing.JFrame {
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
       DistrictRetrieve districtRetrieve = new DistrictRetrieve(this);
       districtRetrieve.gob();
-      districtRetrieve.district(districtName.getText());
+      String str = new String(districtName.getText());
+      districtRetrieve.district(str.replaceAll(" ", ""));
     }//GEN-LAST:event_searchButtonActionPerformed
 
 
